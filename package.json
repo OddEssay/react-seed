@@ -1,0 +1,14 @@
+{
+  "name": "react-seed",
+  "version": "0.0.0",
+  "description": "A ready to work with react seed project with React, Redux, Sagas, Reselect.",
+  "main": "src/app.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Paul Bennett-Freeman <clicknmix@gmail.com>",
+  "license": "MIT"
+}
