@@ -23,6 +23,7 @@
     "html-webpack-plugin": "^2.22.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-router": "^2.7.0",
     "webpack": "^1.13.2"
   },
   "devDependencies": {

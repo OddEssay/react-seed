@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const plugins = [
   new HtmlWebpackPlugin({
-    template: './src/index.html'
+    template: './src/index.html',
   }),
 ]
 
@@ -17,9 +17,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins,
 }
