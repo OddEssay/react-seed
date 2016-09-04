@@ -38,5 +38,18 @@ module.exports = {
       'error',
       'never',
     ],
+    'comma-spacing': [
+      'error',
+      {
+        'before': false,
+        'after': true,
+      }
+    ],
+    'no-unused-vars': [
+      'error',
+      {
+        'args': 'none',
+      },
+    ]
   }
 }
