@@ -15,6 +15,8 @@ compatible JavaScript.
 | folder             | contents                                                |
 |--------------------|---------------------------------------------------------|
 | ./src              | JavaScript Source Files                                 |
+| ./src/reducers     | The Redux Reducers                                      |
+| ./src/actions      | The Redux Actions                                       |
 
 ## NPM Commands
 
