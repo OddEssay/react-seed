@@ -5,7 +5,10 @@ module.exports = {
     'es6': true,
     'node': true,
   },
-  'extends': 'eslint:recommended',
+  'extends': [
+    'eslint:recommended',
+    'plugin:react/recommended',
+  ],
   'installedESLint': true,
   'parserOptions': {
     'ecmaFeatures': {
@@ -35,5 +38,18 @@ module.exports = {
       'error',
       'never',
     ],
+    'comma-spacing': [
+      'error',
+      {
+        'before': false,
+        'after': true,
+      }
+    ],
+    'no-unused-vars': [
+      'error',
+      {
+        'args': 'none',
+      },
+    ]
   }
 }

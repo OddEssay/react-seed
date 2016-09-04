@@ -24,5 +24,9 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
   },
+  resolve: {
+    root: [__dirname],
+    extensions: [ '', '.jsx', '.js' ],
+  },
   plugins,
 }
