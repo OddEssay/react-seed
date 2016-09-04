@@ -1,6 +1,12 @@
-import { createStore } from 'redux'
+import { createStore, compose } from 'redux'
 import rootReducer from './reducers'
 
-let store = createStore(rootReducer)
+const initialState = {}
+
+const middleware = compose(
+  window.devToolsExtension && window.devToolsExtension()
+)
+
+let store = createStore(rootReducer, initialState, middleware)
 
 export default store
