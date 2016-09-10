@@ -7,11 +7,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import store from './store'
 const history = syncHistoryWithStore(browserHistory, store)
 
-const HelloMessage = React.createClass({
-  render() {
-    return <div>Hello {this.props.params.name}</div>
-  }
-})
+import { HelloMessage } from './components/HelloMessage'
 
 const AppLayout = (props) => <div>{props.children}</div>
 

@@ -1,0 +1,6 @@
+exports[`test HelloMessage 1`] = `
+<div>
+  Hello 
+  World
+</div>
+`;
