@@ -5,7 +5,7 @@
   "main": "src/app.jsx",
   "scripts": {
     "start": "webpack-dev-server --hot --progress --colors --inline",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "react"
@@ -21,6 +21,7 @@
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-react": "^6.2.0",
     "html-webpack-plugin": "^2.22.0",
+    "jest": "^15.1.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
