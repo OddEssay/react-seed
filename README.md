@@ -12,14 +12,17 @@ compatible JavaScript.
 
 ## Project Structure
 
-| folder             | contents                                                |
-|--------------------|---------------------------------------------------------|
-| ./src              | JavaScript Source Files                                 |
-| ./src/reducers     | The Redux Reducers                                      |
-| ./src/actions      | The Redux Actions                                       |
+| folder               | contents                                              |
+|----------------------|-------------------------------------------------------|
+| `./src`              | JavaScript Source Files                               |
+| `./src/components`   | React Components                                      |
+| `./src/**/__tests__` | Jest tests relative to their components               |
+| `./src/reducers`     | The Redux Reducers                                    |
+| `./src/actions`      | The Redux Actions                                     |
 
 ## NPM Commands
 
 | npm run ... |                                                 |
 |-------------|-------------------------------------------------|
 | start       | Run webpack-dev-server on http://localhost:8080 |
+| test        | Run jest tests                                  |
