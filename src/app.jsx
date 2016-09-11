@@ -4,6 +4,16 @@ import { Provider } from 'react-redux'
 import { Router, IndexRoute, Route, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 
+import firebase from 'firebase'
+
+var config = {
+  apiKey: 'AIzaSyCl_OeML7FedsYANoSWL2pcn1gUuwnEIQI',
+  authDomain: 'my-awesome-app-c884f.firebaseapp.com',
+  databaseURL: 'https://my-awesome-app-c884f.firebaseio.com',
+  storageBucket: 'my-awesome-app-c884f.appspot.com',
+}
+firebase.initializeApp(config)
+
 import store from './store'
 const history = syncHistoryWithStore(browserHistory, store)
 
