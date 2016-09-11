@@ -18,6 +18,7 @@ import store from './store'
 const history = syncHistoryWithStore(browserHistory, store)
 
 import { HelloMessage } from './components/HelloMessage'
+import Register from './components/Auth/Register'
 
 const AppLayout = (props) => <div>{props.children}</div>
 
@@ -27,6 +28,7 @@ const App = () => {
       <Router history={history}>
         <Route path='/' component={AppLayout}>
           <IndexRoute component={HelloMessage} />
+          <Route path='/register' component={ Register } />
           <Route path='/:name' component={HelloMessage} />
         </Route>
       </Router>
