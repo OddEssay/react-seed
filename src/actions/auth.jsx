@@ -13,3 +13,9 @@ export const login = (email, password) => {
     password,
   }
 }
+
+export const logout = () => {
+  return {
+    type: 'AUTH_LOGOUT_REQUESTED',
+  }
+}

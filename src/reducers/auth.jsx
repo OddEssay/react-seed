@@ -51,6 +51,14 @@ function auth(state = defaultState, action){
       }
       return newState
     }
+    case 'AUTH_LOGOUT_SUCCEEDED': {
+      const { email } = state
+      const newState = {
+        ...defaultState,
+        email,
+      }
+      return newState
+    }
     default: {
       return state
     }

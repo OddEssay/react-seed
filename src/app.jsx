@@ -18,13 +18,9 @@ import store from './store'
 const history = syncHistoryWithStore(browserHistory, store)
 
 import { HelloMessage } from './components/HelloMessage'
+import AppLayout from './components/AppLayout'
 import Register from './components/Auth/Register'
 import Login from './components/Auth/Login'
-
-const AppLayout = (props) => <div>{props.children}</div>
-AppLayout.propTypes = {
-  children: React.PropTypes.object.isRequired,
-}
 
 const App = () => {
   return (

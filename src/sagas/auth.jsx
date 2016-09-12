@@ -31,9 +31,23 @@ function* loginAuth(action){
     yield put({ type: 'AUTH_LOGIN_FAILED', email: action.email, message: e.message })
   }
 }
+
+function* logoutAuth(action){
+  try {
+    const doLogout = () => firebase.auth().signOut()
+
+    const logoutResult = yield call(doLogout)
+    yield put({ type: 'AUTH_LOGOUT_SUCCEEDED', result: logoutResult })
+    yield put( push('/login') )
+  } catch(e) {
+    yield put({ type: 'AUTH_LOGOUT_FAILED', email: action.email, message: e.message })
+  }
+}
+
 function* AuthSaga(){
   yield fork(takeEvery, 'AUTH_REGISTER_REQUESTED', registerAuth )
   yield fork(takeEvery, 'AUTH_LOGIN_REQUESTED', loginAuth )
+  yield fork(takeEvery, 'AUTH_LOGOUT_REQUESTED', logoutAuth )
 }
 
 export default AuthSaga
