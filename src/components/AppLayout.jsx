@@ -43,8 +43,16 @@ export class AppLayout extends React.Component {
         <footer>
         {
           auth.uid
-          ? <input type='button' onClick={ this.handleLogout } value='Logout' />
-          : [ <Link to='login'>Login</Link>, <span> | </span>, <Link to='register'>Register</Link> ]
+          ? [
+            <Link key='profileLink' to='profile'>Profile</Link>,
+            <span key='spacing'> | </span>,
+            <input key='logoutLink' type='button' onClick={ this.handleLogout } value='Logout' />,
+          ]
+          : [
+            <Link key='loginLink' to='login'>Login</Link>,
+            <span key='spacing'> | </span>,
+            <Link key='registerLink' to='register'>Register</Link>,
+          ]
         }
         </footer>
       </div>

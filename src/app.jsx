@@ -21,6 +21,7 @@ import { HelloMessage } from './components/HelloMessage'
 import AppLayout from './components/AppLayout'
 import Register from './components/Auth/Register'
 import Login from './components/Auth/Login'
+import Profile from './components/Auth/Profile'
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <IndexRoute component={HelloMessage} />
           <Route path='/register' component={ Register } />
           <Route path='/login' component={ Login } />
+          <Route path='/profile' component={ Profile } />
           <Route path='/:name' component={HelloMessage} />
         </Route>
       </Router>
