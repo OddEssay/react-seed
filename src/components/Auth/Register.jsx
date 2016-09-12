@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch) => {
     authActions,
   }
 }
-class Register extends React.Component {
+export class Register extends React.Component {
   static displayName = 'Register'
 
   static propTypes = {
