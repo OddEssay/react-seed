@@ -30,6 +30,27 @@ function auth(state = defaultState, action){
       }
       return newState
     }
+    case 'AUTH_LOGIN_SUCCEEDED': {
+      const { uid, displayName, photoURL, email } = action.result
+      const newState = {
+        ...state,
+        uid,
+        displayName,
+        photoURL,
+        email,
+        loginErrorMessages: [],
+      }
+      return newState
+    }
+    case 'AUTH_LOGIN_FAILED': {
+      const { email, message } = action
+      const newState = {
+        ...state,
+        email,
+        loginErrorMessages: [ message ],
+      }
+      return newState
+    }
     default: {
       return state
     }

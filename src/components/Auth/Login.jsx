@@ -44,7 +44,6 @@ export class Login extends React.Component {
   }
 
   render(){
-    window.map = map
     return (
       <div>
         Login
