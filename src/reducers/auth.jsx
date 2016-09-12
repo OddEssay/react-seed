@@ -4,6 +4,7 @@ const defaultState = {
   photoURL: null,
   email: null,
   registrationErrorMessages: [],
+  loginErrorMessages: [],
 }
 
 function auth(state = defaultState, action){

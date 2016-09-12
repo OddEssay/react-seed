@@ -19,8 +19,12 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 import { HelloMessage } from './components/HelloMessage'
 import Register from './components/Auth/Register'
+import Login from './components/Auth/Login'
 
 const AppLayout = (props) => <div>{props.children}</div>
+AppLayout.propTypes = {
+  children: React.PropTypes.object.isRequired,
+}
 
 const App = () => {
   return (
@@ -29,6 +33,7 @@ const App = () => {
         <Route path='/' component={AppLayout}>
           <IndexRoute component={HelloMessage} />
           <Route path='/register' component={ Register } />
+          <Route path='/login' component={ Login } />
           <Route path='/:name' component={HelloMessage} />
         </Route>
       </Router>

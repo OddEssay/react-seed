@@ -1,6 +1,6 @@
-exports[`test Register Component with errors 1`] = `
+exports[`test Login Component with errors 1`] = `
 <div>
-  Register
+  Login
   <ul>
     <li>
       The email address is already in use by another account.
@@ -23,16 +23,16 @@ exports[`test Register Component with errors 1`] = `
       type="password" />
     <br />
     <input
-      onClick={[Function bound handleRegister]}
+      onClick={[Function bound handleLogin]}
       type="button"
-      value="Register" />
+      value="Login" />
   </form>
 </div>
 `;
 
-exports[`test Register Component without errors 1`] = `
+exports[`test Login Component without errors 1`] = `
 <div>
-  Register
+  Login
   <ul />
   <form>
     <label>
@@ -51,9 +51,9 @@ exports[`test Register Component without errors 1`] = `
       type="password" />
     <br />
     <input
-      onClick={[Function bound handleRegister]}
+      onClick={[Function bound handleLogin]}
       type="button"
-      value="Register" />
+      value="Login" />
   </form>
 </div>
 `;

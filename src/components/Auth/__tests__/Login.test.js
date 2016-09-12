@@ -1,19 +1,19 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Register } from '../Register'
+import { Login } from '../Login'
 import * as authActions from '../../../actions/auth'
 
-test('Register Component without errors', () => {
+test('Login Component without errors', () => {
   const tree = renderer.create(
-    <Register authActions={ authActions }  auth={ {} }/>
+    <Login authActions={ authActions }  auth={ {} }/>
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
-test('Register Component with errors', () => {
+test('Login Component with errors', () => {
   const mockErrors = [ 'The email address is already in use by another account.' ]
   const tree = renderer.create(
-    <Register authActions={ authActions } auth={ { registrationErrorMessages: mockErrors } }/>
+    <Login authActions={ authActions } auth={ { loginErrorMessages: mockErrors } }/>
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })

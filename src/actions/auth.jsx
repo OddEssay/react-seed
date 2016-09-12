@@ -5,3 +5,11 @@ export const register = (email, password) => {
     password,
   }
 }
+
+export const login = (email, password) => {
+  return {
+    type: 'AUTH_LOGIN_REQUESTED',
+    email,
+    password,
+  }
+}

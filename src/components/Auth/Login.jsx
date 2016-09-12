@@ -15,8 +15,8 @@ const mapDispatchToProps = (dispatch) => {
     authActions: bindActionCreators(authActions, dispatch),
   }
 }
-export class Register extends React.Component {
-  static displayName = 'Register'
+export class Login extends React.Component {
+  static displayName = 'Login'
 
   static propTypes = {
     authActions: React.PropTypes.object.isRequired,
@@ -38,20 +38,21 @@ export class Register extends React.Component {
     this.setState( { [ field ]: value } )
   }
 
-  handleRegister() {
+  handleLogin() {
     const { email, password } = this.state
-    this.props.authActions.register( email, password )
+    this.props.authActions.login( email, password )
   }
 
   render(){
+    window.map = map
     return (
       <div>
-        Register
+        Login
         <ul>
           {
             map(
               ( error, index ) => <li key={ index }>{ error }</li>
-            )(this.props.auth.registrationErrorMessages)
+            )( this.props.auth.loginErrorMessages )
           }
         </ul>
         <form>
@@ -74,8 +75,8 @@ export class Register extends React.Component {
 
           <input
             type='button'
-            onClick={this.handleRegister}
-            value='Register'
+            onClick={this.handleLogin}
+            value='Login'
           />
 
         </form>
@@ -84,4 +85,4 @@ export class Register extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
