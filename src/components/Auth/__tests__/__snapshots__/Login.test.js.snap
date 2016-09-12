@@ -1,0 +1,59 @@
+exports[`test Login Component with errors 1`] = `
+<div>
+  Login
+  <ul>
+    <li>
+      The email address is already in use by another account.
+    </li>
+  </ul>
+  <form>
+    <label>
+      Email
+    </label>
+    <input
+      defaultValue={undefined}
+      onChange={[Function onChange]}
+      type="text" />
+    <br />
+    <label>
+      Password
+    </label>
+    <input
+      onChange={[Function onChange]}
+      type="password" />
+    <br />
+    <input
+      onClick={[Function bound handleLogin]}
+      type="button"
+      value="Login" />
+  </form>
+</div>
+`;
+
+exports[`test Login Component without errors 1`] = `
+<div>
+  Login
+  <ul />
+  <form>
+    <label>
+      Email
+    </label>
+    <input
+      defaultValue={undefined}
+      onChange={[Function onChange]}
+      type="text" />
+    <br />
+    <label>
+      Password
+    </label>
+    <input
+      onChange={[Function onChange]}
+      type="password" />
+    <br />
+    <input
+      onClick={[Function bound handleLogin]}
+      type="button"
+      value="Login" />
+  </form>
+</div>
+`;
