@@ -1,5 +1,25 @@
 exports[`test Register 1`] = `
 <div>
   Register
+  <form>
+    <label>
+      Email
+    </label>
+    <input
+      onChange={[Function onChange]}
+      type="text" />
+    <br />
+    <label>
+      Password
+    </label>
+    <input
+      onChange={[Function onChange]}
+      type="password" />
+    <br />
+    <input
+      onClick={[Function bound handleRegister]}
+      type="button"
+      value="Register" />
+  </form>
 </div>
 `;
