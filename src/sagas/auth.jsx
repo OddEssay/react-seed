@@ -14,7 +14,7 @@ function* registerAuth(action){
     yield put({ type: 'AUTH_REGISTER_SUCCEEDED', result: register })
     yield put( push('/success') )
   } catch(e) {
-    yield put({ type: 'AUTH_REGISTER_FAILED', message: e.message })
+    yield put({ type: 'AUTH_REGISTER_FAILED', email: action.email, message: e.message })
   }
 }
 

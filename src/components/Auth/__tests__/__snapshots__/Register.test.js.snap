@@ -1,11 +1,41 @@
-exports[`test Register 1`] = `
+exports[`test Register Component with errors 1`] = `
 <div>
   Register
+  <ul />
   <form>
     <label>
       Email
     </label>
     <input
+      defaultValue={undefined}
+      onChange={[Function onChange]}
+      type="text" />
+    <br />
+    <label>
+      Password
+    </label>
+    <input
+      onChange={[Function onChange]}
+      type="password" />
+    <br />
+    <input
+      onClick={[Function bound handleRegister]}
+      type="button"
+      value="Register" />
+  </form>
+</div>
+`;
+
+exports[`test Register Component without errors 1`] = `
+<div>
+  Register
+  <ul />
+  <form>
+    <label>
+      Email
+    </label>
+    <input
+      defaultValue={undefined}
       onChange={[Function onChange]}
       type="text" />
     <br />

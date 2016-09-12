@@ -3,7 +3,13 @@ import autoBind from 'react-autobind'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as authActions from '../../actions/auth'
+import { map } from 'lodash/fp'
 
+const mapStateToProps = ( state ) => {
+  return {
+    auth: state.auth,
+  }
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     authActions: bindActionCreators(authActions, dispatch),
@@ -14,6 +20,7 @@ export class Register extends React.Component {
 
   static propTypes = {
     authActions: React.PropTypes.object.isRequired,
+    auth: React.PropTypes.object.isRequired,
   }
 
   constructor(props) {
@@ -40,10 +47,16 @@ export class Register extends React.Component {
     return (
       <div>
         Register
+        <ul>
+          {
+            map(error => <li>{error}</li>)(this.props.auth.registrationErrorMessages)
+          }
+        </ul>
         <form>
           <label>Email</label>
           <input
             type='text'
+            defaultValue={this.props.auth.email}
             onChange={ event => this.handleChange('email', event) }
           />
 
@@ -69,4 +82,4 @@ export class Register extends React.Component {
   }
 }
 
-export default connect(undefined, mapDispatchToProps)(Register)
+export default connect(mapStateToProps, mapDispatchToProps)(Register)
