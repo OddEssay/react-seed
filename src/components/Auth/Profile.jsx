@@ -34,15 +34,40 @@ export class Profile extends React.Component {
     super(props)
     autoBind(this)
     this.firebaseRefs = {}
-    this.firebaseRefs['settings'] = firebase.database().ref(`/users/${props.auth.uid}/settings`)
-    this.firebaseRefs['settings'].on(
-      'value',
-      snap => this.props.settingsActions.onValueSnapshot( snap )
-    )
+
+    if(props.auth.uid){
+      this.listenToSettings(props)
+    }
+
+    this.state = {
+      keyToUpdate: '',
+      valueToUpdate: '',
+    }
+  }
+
+  listenToSettings(props) {
+    if(props.auth.uid){
+      this.firebaseRefs['settings'] = firebase.database().ref(`/users/${props.auth.uid}/settings`)
+      this.firebaseRefs['settings'].on(
+        'value',
+        snap => this.props.settingsActions.onValueSnapshot( snap )
+      )
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.auth.uid && this.props.auth.uid === null) {
+      this.listenToSettings(nextProps)
+    }
   }
 
   componentWillUnmount() {
     each( ref => ref.off() )(this.firebaseRefs)
+  }
+
+  handleChange( field, event ) {
+    const value = event.target.value
+    this.setState( { [ field ]: value } )
   }
 
   render(){
@@ -64,6 +89,24 @@ export class Profile extends React.Component {
             }
           </ul>
         </div>
+
+        <div>
+          <label> Key </label>
+          <input
+            type='text'
+            onChange={ event => this.handleChange('keyToUpdate', event) }
+          />
+
+          <br />
+          <label> Value </label>
+          <input
+            type='text'
+            onChange={ event => this.handleChange('valueToUpdate', event) }
+          />
+
+          <button onClick={ () => this.props.settingsActions.update(this.firebaseRefs['settings'], { [this.state.keyToUpdate]: this.state.valueToUpdate })} >Update</button>
+        </div>
+
       </div>
     )
   }

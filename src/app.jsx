@@ -5,7 +5,7 @@ import { Router, IndexRoute, Route, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 
 import firebase from 'firebase'
-
+window.firebase = firebase
 var config = {
   apiKey: 'AIzaSyCl_OeML7FedsYANoSWL2pcn1gUuwnEIQI',
   authDomain: 'my-awesome-app-c884f.firebaseapp.com',
