@@ -1,9 +1,6 @@
-export function readValueSnapshot(ref, snap) {
-  console.log('readValueSnapshot',snap)
-  window.snap = snap
+export function onValueSnapshot(snap) {
   return {
-    type: 'FIREBASE_READ_VALUE',
+    type: 'SETTINGS_ON_VALUE',
     data: snap.val(),
-    ref
   }
 }

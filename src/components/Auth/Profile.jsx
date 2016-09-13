@@ -2,8 +2,9 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import autoBind from 'react-autobind'
 import { connect } from 'react-redux'
-import { each, map } from 'lodash/fp'
+import { each } from 'lodash/fp'
 import firebase from 'firebase'
+import { map } from '../../helpers'
 
 import * as settingsActions from '../../actions/settings'
 
@@ -33,9 +34,11 @@ export class Profile extends React.Component {
     super(props)
     autoBind(this)
     this.firebaseRefs = {}
-    this.firebaseRefs['settings'] = firebase.database().ref('/users/123/settings')
-    this.firebaseRefs['settings'].on('value', snap => this.props.settingsActions.readValueSnapshot('/users/123/settings', snap))
-    window.fbref = this.firebaseRefs
+    this.firebaseRefs['settings'] = firebase.database().ref(`/users/${props.auth.uid}/settings`)
+    this.firebaseRefs['settings'].on(
+      'value',
+      snap => this.props.settingsActions.onValueSnapshot( snap )
+    )
   }
 
   componentWillUnmount() {
@@ -44,7 +47,7 @@ export class Profile extends React.Component {
 
   render(){
     const { displayName, email } = this.props.auth
-    const { settings } = this.props.settings
+    const { settings } = this.props
     return (
       <div>
         <div>
@@ -57,7 +60,7 @@ export class Profile extends React.Component {
           <h3>Settings</h3>
           <ul>
             {
-              map(setting => <li key={setting.key}><b>{setting.key}:</b> {setting.value}</li>)(settings)
+              map( (setting, key) => <li key={key}><b>{key}:</b> {setting}</li>)(settings)
             }
           </ul>
         </div>
