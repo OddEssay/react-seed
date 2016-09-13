@@ -3,6 +3,7 @@ import autoBind from 'react-autobind'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Link } from 'react-router'
+import firebase from 'firebase'
 import * as authActions from '../actions/auth'
 
 function mapStateToProps(state) {
@@ -29,6 +30,8 @@ export class AppLayout extends React.Component {
   constructor(props) {
     super(props)
     autoBind(this)
+    const nextOrObserver = next => next ? props.authActions.restoreUser(next) : null
+    firebase.auth().onAuthStateChanged(nextOrObserver)
   }
 
   handleLogout(){

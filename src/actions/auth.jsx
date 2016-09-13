@@ -19,3 +19,10 @@ export const logout = () => {
     type: 'AUTH_LOGOUT_REQUESTED',
   }
 }
+
+export const restoreUser = ( firebaseUser ) => {
+  return {
+    type: 'AUTH_LOGIN_SUCCEEDED',
+    result: firebaseUser,
+  }
+}
