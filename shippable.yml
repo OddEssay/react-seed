@@ -4,6 +4,8 @@ node_js:
   - 4.2.3
 env:
   - NODE_ENV=production
+  - COVERALLS_SERVICENAME=react-seed
+  - secure: epi8rDYaqnQ1dnSAGunP0J79npu7Umpi2zBpTCeUtPJAR79AKfaVNAAaeSG2YyiT0wF5vSNQtzXmLfgZIoVeb3CPkYHlBOn6mgkHoRhuhvAs1CWb5NtfS5SU0mJGRXXWEq+McBpAIYSnE+LD5O96/UY96vGk1TghwTeNhSaO8zh8cK1/lvygemsuFiyYu/vUbbegctPZ8zCp4LMBn/ThoHAzUNEJyrFHN1+tp6+MJ8GRKWtV8SOYhl+oQUe420ei8umSqjl4wO3b6BxECCZmNqfeU4xwPmOaNOQ0FHL4RgZL6ILYgoBkYLiNAE+8MATIbVVklFSoiGoDSvLKMgSU8A==
 build:
   pre_ci_boot:
     image_name: drydock/u14nod
@@ -12,6 +14,8 @@ build:
   ci:
     - npm install
     - npm test
+    - npm run cover
+    - cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   cache: true
   cache_dir_list:
     - $SHIPPABLE_BUILD_DIR/node_modules
