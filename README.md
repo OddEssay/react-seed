@@ -40,3 +40,10 @@ The project uses jest for testing, and makes use of the "Snapshot" method outlin
 | start           | Run webpack-dev-server on http://localhost:8080  |
 | test            | Run jest tests                                   |
 | test -- --watch | Run jest in watch mode                           |
+
+### Other Notes
+
+## Inline spin.js
+
+In `src/index.html` the minified version of spin.js is placed inline, and attached to the `#app` div.
+This gives a loading state to the user, and when React attaches to the div is simply removed.
