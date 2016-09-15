@@ -1,5 +1,7 @@
 # React Seed
 
+[![Coverage Status](https://coveralls.io/repos/github/OddEssay/react-seed/badge.svg?branch=feature%2Fcode-coverage)](https://coveralls.io/github/OddEssay/react-seed?branch=feature%2Fcode-coverage)
+
 ## Build Packages
 
 ### webpack
