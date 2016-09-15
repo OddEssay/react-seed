@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - 6.2.0 
-  - 4.2.3
 env:
   - secure: pmyHk1tM2/+zNuLMuG65witxUauw/Oo+nF+JfPZwDDigP3rCBFcUz0O0ljm/ZMLEjGQdhOLlVsEmnmX7pbuvObhPBcC/FfOX30Qm+iZ72WJNOFBoby+4FX2DubSwdp5xb/2TSjFWkw6220V0L2k+RqReuIRCCpSA+HDL9x7kt/mQzIXKNk2JVxezFAfDzbVtbm8ppLGD7e+U2ugt8B9/OtO10bjfl4E9zNBL2yfroAS5RNRUG36Jks1CUTZh8tPuQM5IAmfqC8GRgWv3izkPU1/g3a+z0rUsvnnE5Op718pdvsbL8/pwmAxpIZ6WjulFBM47Mw2gzZDwbfWnJSHoDg==
 build:
