@@ -3,9 +3,7 @@ node_js:
   - 6.2.0 
   - 4.2.3
 env:
-  - NODE_ENV=production
-  - COVERALLS_SERVICENAME=react-seed
-  - secure: epi8rDYaqnQ1dnSAGunP0J79npu7Umpi2zBpTCeUtPJAR79AKfaVNAAaeSG2YyiT0wF5vSNQtzXmLfgZIoVeb3CPkYHlBOn6mgkHoRhuhvAs1CWb5NtfS5SU0mJGRXXWEq+McBpAIYSnE+LD5O96/UY96vGk1TghwTeNhSaO8zh8cK1/lvygemsuFiyYu/vUbbegctPZ8zCp4LMBn/ThoHAzUNEJyrFHN1+tp6+MJ8GRKWtV8SOYhl+oQUe420ei8umSqjl4wO3b6BxECCZmNqfeU4xwPmOaNOQ0FHL4RgZL6ILYgoBkYLiNAE+8MATIbVVklFSoiGoDSvLKMgSU8A==
+  - secure: pmyHk1tM2/+zNuLMuG65witxUauw/Oo+nF+JfPZwDDigP3rCBFcUz0O0ljm/ZMLEjGQdhOLlVsEmnmX7pbuvObhPBcC/FfOX30Qm+iZ72WJNOFBoby+4FX2DubSwdp5xb/2TSjFWkw6220V0L2k+RqReuIRCCpSA+HDL9x7kt/mQzIXKNk2JVxezFAfDzbVtbm8ppLGD7e+U2ugt8B9/OtO10bjfl4E9zNBL2yfroAS5RNRUG36Jks1CUTZh8tPuQM5IAmfqC8GRgWv3izkPU1/g3a+z0rUsvnnE5Op718pdvsbL8/pwmAxpIZ6WjulFBM47Mw2gzZDwbfWnJSHoDg==
 build:
   pre_ci_boot:
     image_name: drydock/u14nod
