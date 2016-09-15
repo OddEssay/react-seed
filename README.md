@@ -47,3 +47,11 @@ The project uses jest for testing, and makes use of the "Snapshot" method outlin
 
 In `src/index.html` the minified version of spin.js is placed inline, and attached to the `#app` div.
 This gives a loading state to the user, and when React attaches to the div is simply removed.
+
+# Repo Notes
+
+## Greenkeeper
+This repo uses Green Keeper from https://greenkeeper.io to monitor the npm packages and automatically issue Pull Requests when there are updates available.
+
+## Shippable CI
+This repo is configured to be tested on Shippable CI from https://shippable.com  to automatically test each commit.
