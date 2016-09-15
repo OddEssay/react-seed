@@ -1,5 +1,8 @@
 # React Seed
 
+[![Run Status](https://api.shippable.com/projects/57d043eb0630640f004d4dcc/badge?branch=master)](https://app.shippable.com/projects/57d043eb0630640f004d4dcc)
+[![Coverage Status](https://coveralls.io/repos/github/OddEssay/react-seed/badge.svg?branch=master)](https://coveralls.io/github/OddEssay/react-seed?branch=master)
+
 ## Build Packages
 
 ### webpack
