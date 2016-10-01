@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --hot --progress --colors --inline",
     "test": "jest",
-    "cover": "jest --coverage"
+    "cover": "jest --coverage",
+    "lint": "./node_modules/.bin/eslint src/**/*.jsx || true",
+    "lint-fix": "./node_modules/.bin/eslint src/**/*.jsx --fix || true"
   },
   "keywords": [
     "react"
