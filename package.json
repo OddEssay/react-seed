@@ -24,7 +24,6 @@
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.14.0",
-    "coveralls": "^2.11.12",
     "eslint-plugin-jsx": "0.0.2",
     "eslint-plugin-react": "^6.2.2",
     "firebase": "^3.4.0",
