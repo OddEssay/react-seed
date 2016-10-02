@@ -4,6 +4,8 @@ import { call, put, fork } from 'redux-saga/effects'
 import { takeEvery } from 'redux-saga'
 import { push } from 'react-router-redux'
 
+import * as authActions from '../actions/auth'
+
 function* registerAuth(action){
   try {
     const email = action.email
@@ -11,10 +13,10 @@ function* registerAuth(action){
     const doRegister = () => firebase.auth().createUserWithEmailAndPassword(email, password)
 
     const register = yield call(doRegister)
-    yield put({ type: 'AUTH_REGISTER_SUCCEEDED', result: register })
+    yield put( authActions.registerSucceeded(register) )
     yield put( push('/success') )
   } catch(e) {
-    yield put({ type: 'AUTH_REGISTER_FAILED', email: action.email, message: e.message })
+    yield put( authActions.registerFailed( action.email, e.message ) )
   }
 }
 

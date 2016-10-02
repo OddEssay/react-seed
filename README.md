@@ -15,13 +15,10 @@ compatible JavaScript.
 
 The project uses jest for testing, and makes use of the "Snapshot" method outlined at https://facebook.github.io/jest/docs/tutorial-react.html#snapshot-testing
 
+Tests for Redux actionCreators are along side the reducers and tested together under `src/reducers/__tests__/`
+
 ### Not tested elements
 *Sagas:* Because the API based nature of the functions would rely on heavy mocking, without extensive work you'd just be testing the mocks, not the API.
-
-*actionCreators:* Because they simply mutate inputs to an object.
-
-*reducers:* Like actionCreators, simply mutate input and testing at this stage would add unneeded fragility. More complex reducers may be tested in the future.
-
 
 
 ## Project Structure

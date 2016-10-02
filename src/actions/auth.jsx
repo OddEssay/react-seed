@@ -6,6 +6,21 @@ export const register = (email, password) => {
   }
 }
 
+export const registerSucceeded = result => {
+  return {
+    type: 'AUTH_REGISTER_SUCCEEDED',
+    result,
+  }
+}
+
+export const registerFailed = ( email, message ) => {
+  return {
+    type: 'AUTH_REGISTER_FAILED',
+    email,
+    message,
+  }
+}
+
 export const login = (email, password) => {
   return {
     type: 'AUTH_LOGIN_REQUESTED',
