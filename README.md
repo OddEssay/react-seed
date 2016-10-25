@@ -50,6 +50,11 @@ Tests for Redux actionCreators are along side the reducers and tested together u
 In `src/index.html` the minified version of spin.js is placed inline, and attached to the `#app` div.
 This gives a loading state to the user, and when React attaches to the div is simply removed.
 
+## Styling
+
+There is no styling added to any of the layouts by design, so that it's easiser to add your UI Library of choice.
+For a selection of libraries I've been looking at, see https://trello.com/b/o04kQcxE/?menu=filter&filter=label:🛠%20Tool,label:Web%20Design
+
 # Repo Notes
 
 ## Greenkeeper
