@@ -34,13 +34,14 @@ Tests for Redux actionCreators are along side the reducers and tested together u
 
 ## NPM Commands
 
-| npm run ...     |                                                            |
-|-----------------|----------------------------------------------------------- |
-| start           | Run webpack-dev-server on http://localhost:8080            |
-| test            | Run jest tests                                             |
-| test -- --watch | Run jest in watch mode                                     |
-| lint            | Run local eslint against the code in `src`                 |
-| lint-fix        | Run local eslint with --fix to resolve any issues it can   |
+| npm run ...                |                                                            |
+|----------------------------|----------------------------------------------------------- |
+| start                      | Run webpack-dev-server on http://localhost:8080            |
+| start --devServerPort=4444 | Run dev server on custom port, eg 4444                     |
+| test                       | Run jest tests                                             |
+| test -- --watch            | Run jest in watch mode                                     |
+| lint                       | Run local eslint against the code in `src`                 |
+| lint-fix                   | Run local eslint with --fix to resolve any issues it can   |
 
 ### Other Notes
 

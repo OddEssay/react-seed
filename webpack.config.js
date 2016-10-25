@@ -23,6 +23,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    port: process.env.npm_config_devServerPort || 8080
   },
   resolve: {
     root: [__dirname + '/src'],
