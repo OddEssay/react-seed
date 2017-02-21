@@ -28,7 +28,7 @@
     "eslint-plugin-react": "^6.2.2",
     "firebase": "^3.4.0",
     "html-webpack-plugin": "^2.22.0",
-    "jest": "^15.1.1",
+    "jest": "^19.0.0",
     "lodash": "^4.15.0",
     "react": "^15.3.1",
     "react-autobind": "^1.0.6",
